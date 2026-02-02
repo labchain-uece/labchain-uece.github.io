@@ -1,6 +1,6 @@
 export const coordinator = {
-  name: 'Jerffeson Souza',
-  title: { pt: 'Prof. Dr.', en: 'Prof. Dr.' },
+  name: 'Prof. Dr. Jerffeson Souza',
+  title: { pt: 'Professor Associado', en: 'Associate Professor' },
   role: { pt: 'Coordenador', en: 'Coordinator' },
   university: { pt: 'Universidade Estadual do Ceará', en: 'State University of Ceará' },
   photo: '/images/members/jerffeson.png',
@@ -10,13 +10,13 @@ export const coordinator = {
   },
   lattes: 'http://lattes.cnpq.br/0721071524157651',
   linkedin: 'https://www.linkedin.com/in/jerffeson-souza/',
-  orcid: 'https://orcid.org/0000-0000-0000-0000',
+  orcid: 'https://orcid.org/0000-0001-8361-4806',
 }
 
 export const researchers = [
   {
     name: 'Ana Klyssia',
-    title: { pt: 'Doutoranda', en: 'PhD Student' },
+    title: { pt: 'Estudante de Doutorado', en: 'PhD Student' },
     university: { pt: 'Universidade Estadual do Ceará', en: 'State University of Ceará' },
     photo: '/images/members/anaklyssia.jpeg',
     interests: {
@@ -29,7 +29,7 @@ export const researchers = [
   },
   {
     name: 'Pamella Soares',
-    title: { pt: 'Doutoranda', en: 'PhD Student' },
+    title: { pt: 'Estudante de Doutorado', en: 'PhD Student' },
     university: { pt: 'Universidade Estadual do Ceará', en: 'State University of Ceará' },
     photo: '/images/members/pamella.jpeg',
     interests: {
@@ -42,7 +42,7 @@ export const researchers = [
   },
   {
     name: 'Raphael Saraiva',
-    title: { pt: 'Doutorando', en: 'PhD Student' },
+    title: { pt: 'Estudante de Doutorado', en: 'PhD Student' },
     university: { pt: 'Universidade Estadual do Ceará', en: 'State University of Ceará' },
     photo: '/images/members/raphael.png',
     interests: {
@@ -57,8 +57,8 @@ export const researchers = [
 
 export const collaborators = [
   {
-    name: 'Allysson Allex Araújo',
-    title: { pt: 'Prof. Dr.', en: 'Prof. Dr.' },
+    name: 'Prof. Dr. Allysson Allex Araújo',
+    title: { pt: 'Professor Assistente Titular', en: 'Tenured Assistant Professor' },
     university: { pt: 'Universidade Federal do Cariri', en: 'Federal University of Cariri' },
     photo: '/images/members/allysson.png',
     interests: {
