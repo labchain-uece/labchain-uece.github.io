@@ -1,27 +1,27 @@
 export const coordinator = {
-  name: 'Jerffeson Souza',
-  title: { pt: 'Prof. Dr.', en: 'Prof. Dr.' },
+  name: 'Prof. Dr. Jerffeson Souza',
+  title: { pt: 'Professor Associado', en: 'Associate Professor' },
   role: { pt: 'Coordenador', en: 'Coordinator' },
   university: { pt: 'Universidade Estadual do Ceará', en: 'State University of Ceará' },
   photo: '/images/members/jerffeson.png',
   interests: {
-    pt: ['Engenharia de Software', 'Blockchain', 'Sistemas Distribuídos'],
-    en: ['Software Engineering', 'Blockchain', 'Distributed Systems'],
+    pt: ['Blockchain', 'Criptomoedas', 'Inteligência Artificial', 'Mineração de Dados'],
+    en: ['Blockchain', 'Cryptocurrencies', 'Artificial Intelligence', 'Data Mining'],
   },
-  lattes: 'http://lattes.cnpq.br/3273361927828490',
+  lattes: 'http://lattes.cnpq.br/0721071524157651',
   linkedin: 'https://www.linkedin.com/in/jerffeson-souza/',
-  orcid: 'https://orcid.org/0000-0000-0000-0000',
+  orcid: 'https://orcid.org/0000-0001-8361-4806',
 }
 
 export const researchers = [
   {
     name: 'Ana Klyssia',
-    title: { pt: 'Doutoranda', en: 'PhD Student' },
+    title: { pt: 'Estudante de Doutorado', en: 'PhD Student' },
     university: { pt: 'Universidade Estadual do Ceará', en: 'State University of Ceará' },
     photo: '/images/members/anaklyssia.jpeg',
     interests: {
-      pt: ['Blockchain', 'Engenharia de Software'],
-      en: ['Blockchain', 'Software Engineering'],
+      pt: ['Blockchain', 'Teste de Software', 'Experiência do Usuário', 'Engenharia de Software'],
+      en: ['Blockchain', 'Software Testing', 'User Experience', 'Software Engineering'],
     },
     lattes: 'http://lattes.cnpq.br/0895445786746313',
     linkedin: 'https://www.linkedin.com/in/anaklyssia/',
@@ -29,12 +29,12 @@ export const researchers = [
   },
   {
     name: 'Pamella Soares',
-    title: { pt: 'Doutoranda', en: 'PhD Student' },
+    title: { pt: 'Estudante de Doutorado', en: 'PhD Student' },
     university: { pt: 'Universidade Estadual do Ceará', en: 'State University of Ceará' },
     photo: '/images/members/pamella.jpeg',
     interests: {
-      pt: ['Blockchain', 'Engenharia de Software', 'Experiência do Desenvolvedor'],
-      en: ['Blockchain', 'Software Engineering', 'Developer Experience'],
+      pt: ['Blockchain', 'Engenharia de Software', 'BOSE', 'Experiência do Desenvolvedor'],
+      en: ['Blockchain', 'Software Engineering', 'BOSE', 'Developer Experience'],
     },
     lattes: 'http://lattes.cnpq.br/2415050920835932',
     linkedin: 'https://www.linkedin.com/in/pamellasoaresds/',
@@ -42,12 +42,12 @@ export const researchers = [
   },
   {
     name: 'Raphael Saraiva',
-    title: { pt: 'Doutorando', en: 'PhD Student' },
+    title: { pt: 'Estudante de Doutorado', en: 'PhD Student' },
     university: { pt: 'Universidade Estadual do Ceará', en: 'State University of Ceará' },
     photo: '/images/members/raphael.png',
     interests: {
-      pt: ['Blockchain', 'Qualidade de Software', 'Métricas'],
-      en: ['Blockchain', 'Software Quality', 'Metrics'],
+      pt: ['Blockchain', 'Engenharia de Software', 'BOSE','Qualidade de Software'],
+      en: ['Blockchain', 'Software Engineering', 'BOSE', 'Software Quality'],
     },
     lattes: 'http://lattes.cnpq.br/2845279444442168',
     linkedin: 'https://www.linkedin.com/in/raphaelsaraiva/',
@@ -57,13 +57,13 @@ export const researchers = [
 
 export const collaborators = [
   {
-    name: 'Allysson Allex Araújo',
-    title: { pt: 'Prof. Dr.', en: 'Prof. Dr.' },
+    name: 'Prof. Dr. Allysson Allex Araújo',
+    title: { pt: 'Professor Assistente Titular', en: 'Tenured Assistant Professor' },
     university: { pt: 'Universidade Federal do Cariri', en: 'Federal University of Cariri' },
     photo: '/images/members/allysson.png',
     interests: {
-      pt: ['Engenharia de Software', 'Criptoeconomia', 'Blockchain', 'Inovação Digital'],
-      en: ['Software Engineering', 'Cryptoeconomics', 'Blockchain', 'Digital Innovation'],
+      pt: ['Aspectos Sociais, Humanos e Econômicos de Software', 'Desenvolvimento de Sistemas de Informação'],
+      en: ['Social, Human, and Economic Aspects', 'Development of Information Systems'],
     },
     lattes: 'http://lattes.cnpq.br/1768955171390815',
     linkedin: 'https://www.linkedin.com/in/allyssonaraujo/',
