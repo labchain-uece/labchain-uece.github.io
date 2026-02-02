@@ -227,7 +227,7 @@ export default function Home() {
             </a>
             <a href="https://www.uece.br/ppgcc" target="_blank" rel="noopener noreferrer" className="affiliation-card">
               <img
-                src={assetUrl('/images/ppgcc-logo.jpg')}
+                src={assetUrl('/images/ppgcc-logo.png')}
                 alt="PPGCC"
                 className="affiliation-logo"
               />
