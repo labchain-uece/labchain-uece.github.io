@@ -10,7 +10,7 @@ export const projects = [
       en: 'Intelligent chatbot to support lab research and interactions, using artificial intelligence to answer questions about blockchain and help disseminate knowledge produced by Labchain.',
     },
     image: '/images/projects/chatbot.png',
-    url: '#',
+    url: 'https://raphaelsaraiva.github.io/react-wiki-chatbot/',
   },
   {
     id: 2,
@@ -40,6 +40,6 @@ export const projects = [
       en: 'Dataset for empirical research in Blockchain-Oriented Software Engineering, providing curated data for studies on Web3 software development.',
     },
     image: '/images/projects/web3blockset.png',
-    url: '#',
+    url: 'https://pamellasds.github.io/web3blockset-dashboard/#/',
   },
 ]

@@ -39,7 +39,49 @@ const IconCrypto = () => (
   </svg>
 )
 
-const researchIcons = [<IconChain />, <IconHealth />, <IconDoc />, <IconCrypto />]
+const IconDistributed = () => (
+  <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+    <circle cx="18" cy="8" r="4" stroke="#7663cf" strokeWidth="2.2"/>
+    <circle cx="8" cy="28" r="4" stroke="#7663cf" strokeWidth="2.2"/>
+    <circle cx="28" cy="28" r="4" stroke="#7663cf" strokeWidth="2.2"/>
+    <path d="M16 11l-6 14M20 11l6 14M12 28h12" stroke="#7663cf" strokeWidth="2.2" strokeLinecap="round"/>
+  </svg>
+)
+
+const IconSectors = () => (
+  <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+    <rect x="6" y="12" width="8" height="8" rx="2" stroke="#7663cf" strokeWidth="2.2"/>
+    <rect x="22" y="12" width="8" height="8" rx="2" stroke="#7663cf" strokeWidth="2.2"/>
+    <rect x="14" y="22" width="8" height="8" rx="2" stroke="#7663cf" strokeWidth="2.2"/>
+    <circle cx="18" cy="8" r="2" fill="#7663cf"/>
+  </svg>
+)
+
+const IconRepository = () => (
+  <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+    <rect x="6" y="6" width="24" height="24" rx="4" stroke="#7663cf" strokeWidth="2.2"/>
+    <path d="M12 14h12M12 18h8M12 22h10" stroke="#7663cf" strokeWidth="2" strokeLinecap="round"/>
+    <circle cx="26" cy="10" r="3" fill="#7663cf"/>
+  </svg>
+)
+
+const IconLegal = () => (
+  <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+    <path d="M18 6l-10 8v14a2 2 0 002 2h16a2 2 0 002-2V14l-10-8z" stroke="#7663cf" strokeWidth="2.2" strokeLinejoin="round"/>
+    <rect x="14" y="20" width="8" height="10" fill="#7663cf" opacity="0.2"/>
+    <path d="M14 20h8v10h-8z" stroke="#7663cf" strokeWidth="2"/>
+  </svg>
+)
+
+const IconInnovation = () => (
+  <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+    <circle cx="18" cy="15" r="7" stroke="#7663cf" strokeWidth="2.2"/>
+    <path d="M15 22v6h6v-6" stroke="#7663cf" strokeWidth="2.2" strokeLinejoin="round"/>
+    <path d="M18 8v2M26 15h2M10 15H8M24 8l1.5 1.5M12 8l-1.5 1.5" stroke="#7663cf" strokeWidth="2" strokeLinecap="round"/>
+  </svg>
+)
+
+const researchIcons = [<IconChain />, <IconHealth />, <IconCrypto />, <IconDistributed />, <IconSectors />, <IconRepository />, <IconLegal />, <IconInnovation />]
 
 const stats = [
   { key: 'numbers_publications', value: '25+' },
@@ -116,7 +158,7 @@ export default function Home() {
         <div className="container about-layout">
           <div className="about-text">
             <h2 className="section-title">{t('about_title')}</h2>
-            <p className="section-subtitle">{t('about_subtitle')}</p>
+            {/* <p className="section-subtitle">{t('about_subtitle')}</p> */}
             <p>{t('about_text')}</p>
             <p>{t('about_text2')}</p>
           </div>
@@ -140,7 +182,7 @@ export default function Home() {
           <h2 className="section-title">{t('research_lines_title')}</h2>
           <p className="section-subtitle">{t('research_lines_subtitle')}</p>
           <div className="rl-grid">
-            {[1, 2, 3, 4].map((n, i) => (
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((n, i) => (
               <div className="rl-card" key={n}>
                 <div className="rl-icon">{researchIcons[i]}</div>
                 <h3>{t(`rl_${n}_title`)}</h3>
