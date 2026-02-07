@@ -1,121 +1,185 @@
-Labchain - Laboratório de Pesquisa em Blockchain e suas Aplicações
-Universidade Estadual do Ceará
+# Labchain - Website
 
-Membros:
-Prof. Dr. Jerffeson Souza - Coordenador
+Site institucional do Laboratório de Pesquisa em Blockchain e suas Aplicações da Universidade Estadual do Ceará (UECE).
 
-Ana Klyssia - Doutoranda
-Pamella Soares - Doutoranda
-Raphael Saraiva - Doutorando
+## 🚀 Tecnologias
 
-Colaboradores:
-Prof. Dr. Allysson Allex Araujo
+- React + Vite
+- React Router (HashRouter para GitHub Pages)
+- CSS puro com variáveis CSS
+- Sistema de i18n customizado (PT/EN)
 
+## 📦 Instalação e Execução
 
-Ultimos artigos:
+```bash
+cd site
+npm install
+npm run dev      # Desenvolvimento em http://localhost:5173
+npm run build    # Build para produção
+```
 
-2026
+## 🌐 Deploy
 
-Web3BlockSet: A Dataset for Empirical Research in Blockchain-Oriented Software Engineering
-Soares, P.; Destefanis, G.; dos Santos, A. C. N.; Araújo, A. A.; Saraiva, R.; Souza, J.
-Mining Software Repositories (MSR), 2025.
+O site está configurado para deploy automático no GitHub Pages via GitHub Actions. Ao fazer push para `main`, o workflow `.github/workflows/deploy.yml` faz build e deploy automaticamente.
 
-Towards an Intelligent Platform for Supporting Quality Assessment in Blockchain Systems
-Saraiva, R.; Araújo, A. A.; Santos, R. S.; Soares, P.; Souza, J. Workshop on Emerging Trends in Software Engineering for Blockchain (WETSEB),
-Fortaleza, Ceará, Brazil, 2025.
+**URL de produção:** https://pamellasds.github.io/labchain-website/
 
-2025
+## 📝 Como Adicionar Conteúdo
 
-Metrics for Quality Assessment in Blockchain-based Systems: A Systematic Mapping Study
-Saraiva, R.; Araújo, A. A.; Soares, P.; Pontes, J. C.; Souza, J.
-Simpósio Brasileiro de Sistemas de Informação (SBSI), p. 545–554, 2025.
+### 1. Adicionar Membro
 
-Blockchain Developer Experience: A Multivocal Literature Review
-Soares, P.; Araújo, A. A.; Destefanis, G.; Neykova, R.; Saraiva, R.; Souza, J.
-IEEE/ACM 18th International Conference on Cooperative and Human Aspects of Software Engineering (CHASE), 2025.
+Edite `site/src/data/members.js`:
 
-Bridging Blockchain Technology to Electronic Patient Record Engineering: A Sociotechnical and User-centered Analysis
-Soares, P.; Araújo, A. A.; Saraiva, R.; Souza, J.
-Journal of Software Engineering Research and Development (JSED), v. 13, n. 1, p. 132–149, 2025.
+```js
+{
+  id: 5,
+  name: 'Nome do Membro',
+  role: 'researcher', // 'coordinator', 'researcher', ou 'collaborator'
+  photo: '/images/members/nome.jpg', // Adicione a foto em site/public/images/members/
+  lattes: 'http://lattes.cnpq.br/ID',
+  interests: {
+    pt: ['Interesse 1', 'Interesse 2'],
+    en: ['Interest 1', 'Interest 2']
+  }
+}
+```
 
-2024
+### 2. Adicionar Publicação
 
-Towards Blockchain Developer Experience (BcDEx): Exploring Dimensions of Developer Experience in Blockchain-oriented Software Engineering
-Soares, P.; Araújo, A. A.; Saraiva, R.; Souza, J.
-Simpósio Brasileiro de Engenharia de Software (SBES), v. 38, p. 616–622, 2024.
+Edite `site/src/data/publications.js`:
 
-Sociotechnical Dynamics in Open Source Smart Contract Repositories: An Exploratory Data Analysis of Curated High Market Value Projects
-Costa, S.; Paixão, M.; Steinmacher, I.; Soares, P.; Araújo, A. A.; Souza, J.
-Proceedings of the 20th International Conference on Predictive Models and Data Analytics in Software Engineering, 2024.
+```js
+{
+  year: 2026,
+  papers: [
+    {
+      title: 'Título do Paper',
+      authors: 'Autor1, A.; Autor2, B.; Autor3, C.',
+      venue: 'Nome da Conferência/Journal, v. X, p. Y-Z, 2026.',
+      preprint: '/images/papers/2026/nome-preprint.pdf', // ou null se não tiver
+      publisherUrl: 'https://doi.org/...', // ou '#' se não tiver
+      award: null, // ou 'Nome do Prêmio' se tiver
+    }
+  ]
+}
+```
 
-Cryptoeconomics as a Market Shaping Phenomenon upon Business Model Innovation: A Systematic Literature Review
-Araújo, A. A.; Soares, P.; Saraiva, R.; Câmara, S.; Souza, J.
-International Journal of Business Innovation and Research, v. 33, n. 4, p. 548–575, 2024.
+**Importante:**
+- PDFs de preprints devem estar em `site/public/images/papers/ANO/arquivo.pdf`
+- Se `preprint` ou `publisherUrl` for `null` ou `'#'`, o botão não aparecerá
 
-2023
+### 3. Adicionar Atividade/Notícia
 
-Extending the Docstone to Enable a Blockchain-based Service for Customizable Assets and Blockchain Types
-Soares, P.; Saraiva, R.; Fernandes, I.; Araújo, A. A.; Souza, J.; Loiola, R.
-Journal of Software Engineering Research and Development (JSED), v. 11, n. 1, p. 1–19, 2023.
+Edite `site/src/data/news.js`:
 
-Uma proposta de integração de sistemas da Secretaria do Patrimônio da União ao blockchain para incentivo à transparência de processos: resultados de uma pesquisa em andamento
-Fernandes, I.; Soares, P.; Saraiva, R.; Vicente, B.; Serta, A.; Loiola, R.; Araújo, A. A. et al.
-Workshop de Computação Aplicada em Governo Eletrônico (WCGE), p. 232–239, 2023.
+```js
+{
+  id: 5,
+  date: '2026-03-15', // Formato ISO: YYYY-MM-DD
+  tag: 'evento', // 'evento', 'premiacao', ou 'publicacao'
+  title: {
+    pt: 'Título em Português',
+    en: 'Title in English'
+  },
+  description: {
+    pt: 'Descrição em português...',
+    en: 'Description in English...'
+  },
+  photos: [
+    '/images/news/evento-0.jpg',
+    '/images/news/evento-1.jpg',
+  ] // Adicione as fotos em site/public/images/news/
+}
+```
 
-Towards a Blockchain-based API to Ensure Data Interoperability and Transparency in the Registration and Inspection Processes of Brazilian Water Dams
-Macedo, A. J.; Araújo, A. A.; Saraiva, R.; Soares, P.; Tomaz, A. E. B. et al.
-Proceedings of the XIX Brazilian Symposium on Information Systems, p. 86–93, 2023.
+**Tags disponíveis:**
+- `evento`: Participação em eventos (mostra botão "Ver Momentos")
+- `premiacao`: Prêmios recebidos (mostra botão "Ver Momentos")
+- `publicacao`: Novas publicações (não mostra botão)
 
-Dominating the Wild: How Have Companies Been Leveraging Cryptoeconomics to Shape Markets through Business Model Innovation?
-Araújo, A. A.; Soares, P.; Saraiva, R.; Câmara, S.; Souza, J.
-International Journal of Innovation and Technology Management, v. 20, n. 2, 2350009, 2023.
+### 4. Adicionar Projeto
 
-2022
+Edite `site/src/data/projects.js`:
 
-Docstone: A Blockchain-based Architecture for a Customizable Document Registration Service
-Soares, P.; Saraiva, R.; Fernandes, I.; Souza, J.; Loiola, R.
-Proceedings of the 16th Brazilian Symposium on Software Components, Architectures, and Reuse, 2022.
+```js
+{
+  id: 5,
+  name: 'Nome do Projeto', // ou { pt: 'Nome PT', en: 'Name EN' }
+  description: {
+    pt: 'Descrição em português...',
+    en: 'Description in English...'
+  },
+  image: '/images/projects/projeto.png', // Adicione em site/public/images/projects/
+  url: 'https://url-do-projeto.com' // ou '#' se não tiver (botão não aparecerá)
+}
+```
 
-Aspectos Colaborativos no Desenvolvimento de Contratos Inteligentes da Plataforma Ethereum: Um Estudo Exploratório-descritivo Preliminar
-Rodrigues, A.; Araújo, A. A.; Paixão, M.; Soares, P.
-Workshop sobre Aspectos Sociais, Humanos e Econômicos de Software (WASHES), 2022.
+### 5. Editar Textos da Interface
 
-How Blockchain and Microservices Are Being Used Together: A Systematic Mapping Study
-Santos, R.; Soares, P.; Rodrigues, E.; Maia, P. H. M.; Silveira, A.
-International Workshop on Emerging Trends in Software Engineering, 2022.
+Edite `site/src/i18n/translations.js`:
 
-A Blockchain-based Customizable Document Registration Service for Third Parties
-Soares, P.; Saraiva, R.; Fernandes, I.; Neto, A.; Souza, J.
-IEEE International Conference on Blockchain and Cryptocurrency (ICBC), p. 1–2, 2022.
+```js
+export const translations = {
+  pt: {
+    about_text: 'Novo texto em português...',
+    // ...
+  },
+  en: {
+    about_text: 'New text in English...',
+    // ...
+  }
+}
+```
 
-2021
+**Principais seções:**
+- `hero_*`: Hero da home
+- `about_*`: Seção "Quem Somos"
+- `rl_*`: Linhas de pesquisa (rl_1 a rl_8)
+- `contact_*`: Página de contato
+- `members_*`, `research_*`, `activities_*`, `projects_*`: Seções específicas
 
-Escalabilidade no Contexto de Prontuário Eletrônico do Paciente Baseado em Blockchain: Um Estudo Experimental sobre Armazenamento Off-chain
-Soares, P.; Araújo, A. A.; Saraiva, R.; Souza, J.
-Workshop em Modelagem e Simulação de Sistemas Intensivos em Software (MSSiS), 2021.
+## 📁 Estrutura de Arquivos
 
-Prontuário Eletrônico do Paciente Baseado em Blockchain: Uma Análise das Potencialidades e Desafios à Luz dos Requisitos da SBIS e LGPD
-Soares, P.; Araújo, A. A.; Saraiva, R.; Souza, J.; Sousa, G.; Duarte, L.
-Congresso Brasileiro de Software: Teoria e Prática (CBSoft), p. 72–75, 2021.
+```
+site/
+├── public/
+│   ├── images/
+│   │   ├── members/         # Fotos dos membros
+│   │   ├── news/           # Fotos das atividades
+│   │   ├── papers/         # PDFs dos preprints (por ano)
+│   │   ├── projects/       # Imagens dos projetos
+│   │   ├── uece-logo.png
+│   │   └── ppgcc-logo.jpg
+│   └── logo.png
+├── src/
+│   ├── components/         # Navbar, Footer, PhotoModal
+│   ├── data/              # Dados (members, publications, news, projects)
+│   ├── i18n/              # Sistema de tradução
+│   ├── pages/             # Páginas (Home, Research, Members, etc.)
+│   ├── utils.js           # assetUrl() para GitHub Pages
+│   └── main.jsx           # Entry point
+└── vite.config.js         # Config com base: '/labchain-website/'
+```
 
-Caracterizando a Evolução de Software de Contratos Inteligentes: Um Estudo Exploratório-descritivo Utilizando GitHub e Etherscan
-Rodrigues, A.; Araújo, A. A.; Paixão, M.; Soares, P.
-Workshop de Visualização, Evolução e Manutenção de Software (VEM), p. 11–15, 2021.
+## 🎨 Paleta de Cores
 
-Uma Avaliação de Desempenho de Soluções Off-chain Baseadas em Sistemas de Armazenamento Distribuído
-Rocha, F. H.; Araújo, A. A.; Soares, P.; Saraiva, R. L.; Souza, J. T.
-iSys – Brazilian Journal of Information Systems, v. 14, n. 1, p. 4–23, 2021.
+```css
+--blue-primary: #319dd8
+--blue-dark: #2563a6
+--purple-primary: #7663cf
+--purple-dark: #5a4aa0
+--gray-dark: #2d2d2d
+```
 
-Miriam: A Blockchain-based Web Application for Managing Professional Registrations of Medical Doctors in Brazil
-Saraiva, R.; Araújo, A. A.; Soares, P.; Souza, J.
-IEEE International Conference on Blockchain and Cryptocurrency (ICBC), p. 1–2, 2021.
+## ⚠️ Observações Importantes
 
-Prontuário Eletrônico do Paciente Baseado em Blockchain: Um Desenho de Pesquisa Sociotécnico
-Soares, P.; Araújo, A. A.; Saraiva, R.; Santos, R.; Souza, J.
-Simpósio Brasileiro de Sistemas Colaborativos (SBSC), p. 13–18, 2021.
+1. **Imagens:** Sempre adicione imagens em `site/public/images/` (não em `src/assets/`)
+2. **GitHub Pages:** O site usa HashRouter (`#/`) para funcionar corretamente no GitHub Pages
+3. **Base Path:** Todos os assets locais usam `assetUrl()` para funcionar com o base path `/labchain-website/`
+4. **Datas:** Use formato ISO `YYYY-MM-DD` em news.js - serão formatadas automaticamente
+5. **Links vazios:** Use `null` ou `'#'` para links inexistentes - os botões não aparecerão
 
-2020
+## 📞 Contato
 
-Building a Prototype Based on Microservices and Blockchain Technologies for Notary’s Office: An Academic Experience Report
-Sousa, P. S.; Nogueira, N. P.; Santos, R. C.; Maia, P. H. M.; Souza, J. T.
-IEEE International Conference on Software Architecture Companion (ICSA-C), 2020.
+- **Email:** jerffeson.souza@uece.br
+- **Localização:** Sala 16, NC2A Térreo — UECE, Fortaleza - CE, Brasil
