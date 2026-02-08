@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useState } from 'react'
+import { useEffect, useCallback, useState, useRef } from 'react'
 import { useLanguage } from '../i18n/LanguageContext'
 import { assetUrl } from '../utils'
 import './PhotoModal.css'
@@ -6,6 +6,7 @@ import './PhotoModal.css'
 export default function PhotoModal({ photos, onClose }) {
   const { t } = useLanguage()
   const [current, setCurrent] = useState(0)
+  const touchStart = useRef(null)
 
   const goNext = useCallback(() => {
     setCurrent(prev => (prev + 1) % photos.length)
@@ -29,11 +30,30 @@ export default function PhotoModal({ photos, onClose }) {
     }
   }, [onClose, goNext, goPrev])
 
+  const handleTouchStart = (e) => {
+    touchStart.current = e.touches[0].clientX
+  }
+
+  const handleTouchEnd = (e) => {
+    if (touchStart.current === null) return
+    const diff = touchStart.current - e.changedTouches[0].clientX
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) goNext()
+      else goPrev()
+    }
+    touchStart.current = null
+  }
+
   if (!photos || photos.length === 0) return null
 
   return (
     <div className="photo-modal-overlay" onClick={onClose}>
-      <div className="photo-modal" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="photo-modal"
+        onClick={(e) => e.stopPropagation()}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         <button className="photo-modal-close" onClick={onClose} aria-label={t('close')}>
           &times;
         </button>
