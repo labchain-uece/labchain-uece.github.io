@@ -37,7 +37,7 @@ export default function Navbar() {
             </Link>
           ))}
           <button className="lang-toggle" onClick={toggleLang} aria-label="Toggle language">
-            {lang === 'pt' ? 'EN' : 'PT'}
+            {lang === 'pt' ? '\u{1F1FA}\u{1F1F8} EN' : '\u{1F1E7}\u{1F1F7} PT'}
           </button>
         </div>
 
