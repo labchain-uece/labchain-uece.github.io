@@ -89,6 +89,16 @@ export default function Research() {
                             {t('view_publisher')}
                           </a>
                         )}
+                        {paper.slides && paper.slides !== '#' && (
+                          <a href={assetUrl(paper.slides)} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                            {t('view_slides')}
+                          </a>
+                        )}
+                        {paper.video && paper.video !== '#' && (
+                          <a href={paper.video} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                            {t('view_video')}
+                          </a>
+                        )}
                       </div>
                     </article>
                   ))}

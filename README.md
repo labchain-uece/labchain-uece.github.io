@@ -22,7 +22,7 @@ npm run build    # Build para produção
 
 O site está configurado para deploy automático no GitHub Pages via GitHub Actions. Ao fazer push para `main`, o workflow `.github/workflows/deploy.yml` faz build e deploy automaticamente.
 
-**URL de produção:** https://pamellasds.github.io/labchain-website/
+**URL de produção:** https://labchain-uece.github.io
 
 ## 📝 Como Adicionar Conteúdo
 
@@ -58,6 +58,8 @@ Edite `site/src/data/publications.js`:
       venue: 'Nome da Conferência/Journal, v. X, p. Y-Z, 2026.',
       preprint: '/images/papers/2026/nome-preprint.pdf', // ou null se não tiver
       publisherUrl: 'https://doi.org/...', // ou '#' se não tiver
+      slides: '/images/papers/2026/nome-slides.pdf', // ou null se não tiver
+      video: 'https://youtube.com/...', // ou null se não tiver (link externo)
       award: null, // ou 'Nome do Prêmio' se tiver
     }
   ]

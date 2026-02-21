@@ -47,6 +47,8 @@ export const translations = {
     view_pdf: 'PDF',
     view_preprint: 'Pre-print',
     view_publisher: 'Publicação',
+    view_slides: 'Slides',
+    view_video: 'Vídeo',
     award_label: 'Premiação',
 
     // Members
@@ -159,6 +161,8 @@ export const translations = {
     view_pdf: 'PDF',
     view_preprint: 'Pre-print',
     view_publisher: 'Publisher',
+    view_slides: 'Slides',
+    view_video: 'Video',
     award_label: 'Award',
 
     // Members
