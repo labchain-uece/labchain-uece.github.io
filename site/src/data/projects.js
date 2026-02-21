@@ -20,7 +20,7 @@ export const projects = [
       en: 'Blockchain-based architecture for a customizable document registration service, allowing third parties to securely and verifiably register documents and digital assets.',
     },
     image: '/images/projects/docstone.png',
-    url: 'https://docstone.host/en/',
+    url: null,
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const projects = [
       en: 'Blockchain-based web application for managing professional registrations of medical doctors in Brazil, ensuring data transparency and immutability.',
     },
     image: '/images/projects/miriam.png',
-    url: '#',
+    url: 'https://br-miriam.github.io/',
   },
   {
     id: 4,
