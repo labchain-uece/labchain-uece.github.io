@@ -42,4 +42,14 @@ export const projects = [
     image: '/images/projects/web3blockset.png',
     url: 'https://pamellasds.github.io/web3blockset-dashboard/#/',
   },
+  {
+    id: 5,
+    name: 'JoBis',
+    description: {
+      pt: 'Proposta de plataforma em blockchain com criptomoeda lastreada em real (1:1) para fomentar startups e integrar parceiros no ecossistema cearense, com transparência e rastreabilidade.',
+      en: 'Proposal for a blockchain platform with a BRL-pegged (1:1) cryptocurrency to foster startups and integrate partners within the Ceará ecosystem, ensuring transparency and traceability.',
+    },
+    image: '/images/projects/jobis.png',
+    url: null,
+  },
 ]
