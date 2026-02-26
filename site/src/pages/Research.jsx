@@ -4,6 +4,12 @@ import { assetUrl } from '../utils'
 import { publications } from '../data/publications'
 import './Research.css'
 
+const TCC_TYPE_KEYS = {
+  monografia: 'tcc_monografia',
+  dissertacao: 'tcc_dissertacao',
+  tese: 'tcc_tese',
+}
+
 export default function Research() {
   const { t } = useLanguage()
   const years = publications.map(p => p.year)
@@ -64,44 +70,62 @@ export default function Research() {
               >
                 <h2 className="research-year">{year}</h2>
                 <div className="research-papers">
-                  {papers.map((paper, i) => (
-                    <article key={i} className="paper-card">
-                      <div className="paper-content">
-                        <h3 className="paper-title">
-                          {paper.title}
-                          {paper.award && (
-                            <span className="paper-award">
-                              {paper.award}
-                            </span>
+                  {papers.map((paper, i) => {
+                    const isTCC = paper.type === 'tcc'
+                    const tccTypeKey = isTCC && paper.tcType ? TCC_TYPE_KEYS[paper.tcType] : null
+
+                    return (
+                      <article key={i} className={`paper-card${isTCC ? ' paper-card--tcc' : ''}`}>
+                        <div className="paper-content">
+                          <h3 className="paper-title">
+                            {paper.title}
+                            {paper.award && (
+                              <span className="paper-award">
+                                {paper.award}
+                              </span>
+                            )}
+                          </h3>
+                          {isTCC && (
+                            <div className="paper-tcc-tags">
+                              <span className="tcc-badge">TCC</span>
+                              {tccTypeKey && (
+                                <span className="tcc-type-badge">{t(tccTypeKey)}</span>
+                              )}
+                              {paper.defenseDate && (
+                                <span className="tcc-defense-date">
+                                  {t('tcc_defense')}: {paper.defenseDate}
+                                </span>
+                              )}
+                            </div>
                           )}
-                        </h3>
-                        <p className="paper-authors">{paper.authors}</p>
-                        <p className="paper-venue">{paper.venue}</p>
-                      </div>
-                      <div className="paper-links">
-                        {paper.preprint && paper.preprint !== '#' && (
-                          <a href={assetUrl(paper.preprint)} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
-                            {t('view_preprint')}
-                          </a>
-                        )}
-                        {paper.publisherUrl && paper.publisherUrl !== '#' && (
-                          <a href={paper.publisherUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
-                            {t('view_publisher')}
-                          </a>
-                        )}
-                        {paper.slides && paper.slides !== '#' && (
-                          <a href={assetUrl(paper.slides)} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
-                            {t('view_slides')}
-                          </a>
-                        )}
-                        {paper.video && paper.video !== '#' && (
-                          <a href={paper.video} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
-                            {t('view_video')}
-                          </a>
-                        )}
-                      </div>
-                    </article>
-                  ))}
+                          <p className="paper-authors">{paper.authors}</p>
+                          <p className="paper-venue">{paper.venue}</p>
+                        </div>
+                        <div className="paper-links">
+                          {paper.preprint && paper.preprint !== '#' && (
+                            <a href={assetUrl(paper.preprint)} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                              {t('view_preprint')}
+                            </a>
+                          )}
+                          {paper.publisherUrl && paper.publisherUrl !== '#' && (
+                            <a href={paper.publisherUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                              {t('view_publisher')}
+                            </a>
+                          )}
+                          {paper.slides && paper.slides !== '#' && (
+                            <a href={assetUrl(paper.slides)} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                              {t('view_slides')}
+                            </a>
+                          )}
+                          {paper.video && paper.video !== '#' && (
+                            <a href={paper.video} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                              {t('view_video')}
+                            </a>
+                          )}
+                        </div>
+                      </article>
+                    )
+                  })}
                 </div>
               </div>
             ))}

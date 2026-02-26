@@ -46,12 +46,38 @@ export const researchers = [
     university: { pt: 'Universidade Estadual do Ceará', en: 'State University of Ceará' },
     photo: '/images/members/raphael.png',
     interests: {
-      pt: ['Blockchain', 'Engenharia de Software', 'BOSE','Qualidade de Software'],
+      pt: ['Blockchain', 'Engenharia de Software', 'BOSE', 'Qualidade de Software'],
       en: ['Blockchain', 'Software Engineering', 'BOSE', 'Software Quality'],
     },
     lattes: 'http://lattes.cnpq.br/2845279444442168',
     linkedin: 'https://www.linkedin.com/in/raphaelsaraiva/',
     orcid: 'https://orcid.org/0000-0003-2054-1982',
+  },
+  {
+    name: 'Karla Haryanna',
+    title: { pt: 'Estudante de Doutorado', en: 'PhD Student' },
+    university: { pt: 'Universidade Estadual do Ceará', en: 'State University of Ceará' },
+    photo: '/images/members/karla.jpg',
+    interests: {
+      pt: ['Blockchain', 'Engenharia de Software', 'Inteligência Artificial'],
+      en: ['Blockchain', 'Software Engineering', 'Artificial Intelligence'],
+    },
+    lattes: 'http://lattes.cnpq.br/8896163832847221',
+    linkedin: 'https://www.linkedin.com/in/karla-haryanna-969b8b32',
+    orcid: 'https://orcid.org/0000-0002-0177-3385',
+  },
+  {
+    name: 'Lúcio Cauper Freitas de França',
+    title: { pt: 'Estudante de Mestrado', en: "Master's Student" },
+    university: { pt: 'Universidade Estadual do Ceará', en: 'State University of Ceará' },
+    photo: '/images/members/lucio.jpg',
+    interests: {
+      pt: ['Engenharia de Software', 'Inteligência Artificial', 'Qualidade de Software', 'Experiência do Usuário'],
+      en: ['Software Engineering', 'Artificial Intelligence', 'Software Quality', 'User Experience'],
+    },
+    lattes: 'http://lattes.cnpq.br/9538592376512405',
+    linkedin: 'https://www.linkedin.com/in/lucio-cauper',
+    orcid: 'https://orcid.org/0009-0009-2535-4802',
   },
 ]
 

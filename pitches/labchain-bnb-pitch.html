@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>LabChain — Pitch BNB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;font-family:'Inter',system-ui,sans-serif;background:#0a0a1a}
+:root{--bd:#195D82;--bk:#2486BC;--bm:#319DD8;--bl:#DDEBF7;--pl:#C2BAEA;--pm:#9789DB;--pd:#7663CF;--gl:#F7F6F6;--tp:#1A2332;--ts:#4A5568;--tl:#718096;--gh:linear-gradient(135deg,#195D82 0%,#2486BC 40%,#7663CF 100%);--gb:linear-gradient(135deg,#7663CF,#319DD8);--cs:0 4px 24px rgba(118,99,207,.10);--cb:1px solid rgba(0,0,0,.04)}
+.ss{width:100vw;height:100vh;position:relative}
+.sl{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .5s cubic-bezier(.4,0,.2,1),transform .5s cubic-bezier(.4,0,.2,1);transform:translateX(60px);overflow:hidden}
+.sl.active{opacity:1;visibility:visible;transform:translateX(0);z-index:2}
+.sl.exit{opacity:0;transform:translateX(-60px);z-index:1}
+.nc{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:16px;z-index:100;background:rgba(255,255,255,.12);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.15);border-radius:40px;padding:8px 20px}
+.nb{width:40px;height:40px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,.15);color:#fff;font-size:18px;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.nb:hover{background:rgba(255,255,255,.3);transform:scale(1.1)}.nb:disabled{opacity:.3;cursor:default;transform:none}
+.nd{display:flex;gap:8px}.dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.25);border:none;cursor:pointer;transition:all .3s}.dot.active{background:#fff;transform:scale(1.3)}
+.ct{color:rgba(255,255,255,.6);font-size:13px;font-weight:500;min-width:42px;text-align:center}
+.kh{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.3);font-size:11px;z-index:100;letter-spacing:.5px}
+.s-cov{background:var(--gh);justify-content:center;align-items:center;text-align:center;position:relative}
+.s-cov::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.08) 0%,transparent 60%),radial-gradient(ellipse at 70% 80%,rgba(118,99,207,.15) 0%,transparent 50%)}
+.cv{position:relative;z-index:1}.cv-logo{width:220px;margin-bottom:16px;filter:brightness(0) invert(1)}
+.cv-t{font-size:52px;font-weight:900;color:#fff;letter-spacing:-2px;margin-bottom:6px}
+.cv-s{font-size:19px;color:rgba(255,255,255,.85)}.cv-a{font-size:13px;color:rgba(255,255,255,.5);font-weight:500;letter-spacing:1px;text-transform:uppercase;margin-top:14px}
+.cv-l{display:flex;gap:36px;align-items:center;justify-content:center;margin-top:32px}.cv-l img{height:34px;opacity:.7;filter:brightness(0) invert(1)}
+.dec{position:absolute;border-radius:50%;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}.dec:nth-child(1){width:500px;height:500px;top:-200px;right:-100px}.dec:nth-child(2){width:600px;height:600px;bottom:-250px;left:-150px}
+.s-ct{background:#fafbfe}
+.hdr{background:var(--gh);padding:32px 56px 24px;position:relative;overflow:hidden}
+.hdr::after{content:'';position:absolute;top:0;right:0;width:300px;height:100%;background:radial-gradient(ellipse at 100% 50%,rgba(255,255,255,.08),transparent 70%)}
+.hdr h2{color:#fff;font-size:30px;font-weight:800;letter-spacing:-1px;position:relative;z-index:1}
+.sn{color:rgba(255,255,255,.35);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:3px;position:relative;z-index:1}
+.bd{flex:1;padding:28px 56px 80px;overflow-y:auto}
+.g{display:grid;gap:16px}.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
+.rc{background:#fff;border-radius:14px;padding:20px 18px;border:var(--cb);box-shadow:var(--cs);transition:transform .2s,box-shadow .2s}
+.rc:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(118,99,207,.15)}
+.rc .i{width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,rgba(118,99,207,.12),rgba(49,157,216,.10));display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:12px}
+.rc h3{font-size:13px;font-weight:700;color:var(--tp);margin-bottom:5px;line-height:1.3}.rc p{font-size:11.5px;color:var(--tl);line-height:1.5}
+.cc{background:#fff;border-radius:14px;padding:26px 22px;border:var(--cb);box-shadow:var(--cs)}
+.cc .ch{display:flex;align-items:center;gap:11px;margin-bottom:18px;padding-bottom:14px;border-bottom:2px solid var(--bl)}
+.cc .ci{width:38px;height:38px;border-radius:10px;background:var(--gb);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.cc h3{font-size:15px;font-weight:700;color:var(--tp)}.cc ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.cc li{font-size:12.5px;color:var(--ts);line-height:1.4;padding-left:18px;position:relative}
+.cc li::before{content:'';position:absolute;left:0;top:5px;width:7px;height:7px;border-radius:50%;background:var(--gb)}
+.mc{background:#fff;border-radius:14px;padding:22px 14px;border:var(--cb);box-shadow:var(--cs);text-align:center;transition:transform .2s}
+.mc:hover{transform:translateY(-3px)}
+.mp{width:86px;height:86px;border-radius:50%;object-fit:cover;margin:0 auto 12px;display:block;border:3px solid var(--bl);box-shadow:0 4px 12px rgba(118,99,207,.12)}
+.mc h3{font-size:12.5px;font-weight:700;color:var(--tp);margin-bottom:5px}
+.mr{display:inline-block;background:linear-gradient(135deg,rgba(118,99,207,.12),rgba(49,157,216,.08));color:var(--pd);font-size:10.5px;font-weight:600;padding:3px 11px;border-radius:20px;margin-bottom:7px}
+.ma{font-size:10.5px;color:var(--tl);line-height:1.4}
+.pc{background:#fff;border-radius:14px;border:var(--cb);box-shadow:var(--cs);overflow:hidden;transition:transform .2s}
+.pc:hover{transform:translateY(-3px)}
+.pm{width:100%;height:105px;object-fit:cover;border-bottom:1px solid rgba(0,0,0,.04)}
+.pi{padding:12px 14px}.pi h3{font-size:13px;font-weight:700;color:var(--tp);margin-bottom:3px}
+.pi p{font-size:10.5px;color:var(--tl);line-height:1.4;margin-bottom:8px}
+.pb{display:inline-block;background:linear-gradient(135deg,rgba(118,99,207,.10),rgba(49,157,216,.06));color:var(--pd);font-size:9.5px;font-weight:600;padding:3px 9px;border-radius:20px}
+.oc{background:#fff;border-radius:14px;padding:20px 18px;border:var(--cb);box-shadow:var(--cs);display:flex;gap:14px;transition:transform .2s}
+.oc:hover{transform:translateY(-3px)}
+.oi{width:46px;height:46px;border-radius:12px;background:var(--gb);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.ot h3{font-size:13.5px;font-weight:700;color:var(--tp);margin-bottom:5px}.ot p{font-size:11.5px;color:var(--tl);line-height:1.5}
+.s-co{background:var(--gh);justify-content:center;align-items:center;position:relative}
+.s-co::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(255,255,255,.06),transparent 60%)}
+.cw{position:relative;z-index:1;display:flex;align-items:center;gap:72px;max-width:880px}
+.cl{flex:1}.cl h2{font-size:40px;font-weight:900;color:#fff;letter-spacing:-1.5px;margin-bottom:22px}
+.cn{font-size:17px;font-weight:700;color:#fff}.cro{font-size:13px;color:rgba(255,255,255,.6);margin-top:-4px;margin-bottom:10px}
+.ci2{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.85);margin-bottom:10px}
+.cic{width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.cri{display:flex;flex-direction:column;align-items:center;gap:10px}
+.cq{width:170px;height:170px;border-radius:14px;background:#fff;padding:11px;box-shadow:0 8px 32px rgba(0,0,0,.2)}.cq img{width:100%;height:100%}
+.cql{color:rgba(255,255,255,.7);font-size:12px;font-weight:600}
+.clo{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;gap:28px;align-items:center}.clo img{height:28px;opacity:.5;filter:brightness(0) invert(1)}
+.sl.active .rc,.sl.active .cc,.sl.active .mc,.sl.active .pc,.sl.active .oc{animation:fu .5s ease both}
+.sl.active .g>:nth-child(1){animation-delay:.05s}.sl.active .g>:nth-child(2){animation-delay:.1s}.sl.active .g>:nth-child(3){animation-delay:.15s}
+.sl.active .g>:nth-child(4){animation-delay:.2s}.sl.active .g>:nth-child(5){animation-delay:.25s}.sl.active .g>:nth-child(6){animation-delay:.3s}
+.sl.active .g>:nth-child(7){animation-delay:.35s}.sl.active .g>:nth-child(8){animation-delay:.4s}
+@keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.sl.active .cv{animation:fi .8s ease both}@keyframes fi{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+</style>
+</head>
+<body>
+<div class="ss">
+
+<div class="sl s-cov active" data-s="0">
+<div class="dec"></div><div class="dec"></div>
+<div class="cv">
+<img src="site/src/assets/logo_name_1.png" class="cv-logo">
+<div class="cv-t">LabChain</div>
+<div class="cv-s">Laboratório de Blockchain e Sistemas Distribuídos</div>
+<div class="cv-a">UECE · PPGCC · Fortaleza — CE</div>
+<div class="cv-l"><img src="site/public/images/uece-logo.png"><img src="site/public/images/ppgcc-logo.png"></div>
+</div></div>
+
+<div class="sl s-ct" data-s="1">
+<div class="hdr"><div class="sn">01 — Pesquisa</div><h2>Linhas de Pesquisa</h2></div>
+<div class="bd"><div class="g g4">
+<div class="rc"><div class="i">🔗</div><h3>Fundamentos e Infraestrutura</h3><p>Protocolos de consenso, redes P2P, segurança criptográfica e arquiteturas DLT</p></div>
+<div class="rc"><div class="i">📜</div><h3>Contratos Inteligentes</h3><p>Verificação formal, auditoria de segurança, linguagens de contratos e padrões</p></div>
+<div class="rc"><div class="i">💰</div><h3>Criptomoedas e Tokenização</h3><p>Stablecoins, DeFi, tokenização de ativos digitais e mecanismos econômicos</p></div>
+<div class="rc"><div class="i">🌐</div><h3>Sistemas Distribuídos</h3><p>Interoperabilidade cross-chain, oráculos, escalabilidade e soluções Layer-2</p></div>
+<div class="rc"><div class="i">🏭</div><h3>Aplicações Setoriais</h3><p>Saúde, agronegócio, governança pública, cadeia de suprimentos e fintech</p></div>
+<div class="rc"><div class="i">🤖</div><h3>IA &amp; Blockchain</h3><p>Integração com inteligência artificial, chatbots especializados, automação</p></div>
+<div class="rc"><div class="i">⚖️</div><h3>Aspectos Regulatórios</h3><p>Compliance, LGPD, marco regulatório de criptoativos, aspectos éticos</p></div>
+<div class="rc"><div class="i">🚀</div><h3>Inovação e Transferência</h3><p>PD&amp;I aplicada, parcerias universidade-empresa, projetos de extensão</p></div>
+</div></div></div>
+
+<div class="sl s-ct" data-s="2">
+<div class="hdr"><div class="sn">02 — Competências</div><h2>Competências Técnicas</h2></div>
+<div class="bd"><div class="g g3">
+<div class="cc"><div class="ch"><div class="ci">⛓️</div><h3>Blockchain &amp; DLT</h3></div><ul><li>Ethereum / Solidity / Hardhat</li><li>Hyperledger Fabric &amp; Besu</li><li>Análise on-chain &amp; forense</li><li>Tokenização de ativos (ERC-20, ERC-721)</li><li>Desenvolvimento de DApps</li></ul></div>
+<div class="cc"><div class="ch"><div class="ci">⚙️</div><h3>Engenharia de Software</h3></div><ul><li>Mineração de repositórios (MSR)</li><li>Verificação formal de contratos</li><li>Auditoria e testes de segurança</li><li>DevOps &amp; CI/CD blockchain</li><li>Arquitetura de microsserviços</li></ul></div>
+<div class="cc"><div class="ch"><div class="ci">🧠</div><h3>IA &amp; Dados</h3></div><ul><li>NLP / Chatbots especializados</li><li>Machine Learning aplicado</li><li>Processamento de documentos</li><li>Análise de dados on-chain</li><li>Modelos preditivos financeiros</li></ul></div>
+</div></div></div>
+
+<div class="sl s-ct" data-s="3">
+<div class="hdr"><div class="sn">03 — Equipe</div><h2>Grupo de Pesquisa</h2></div>
+<div class="bd"><div class="g g5">
+<div class="mc"><img src="site/public/images/members/jerffeson.png" class="mp"><h3>Prof. Jerffeson Souza</h3><div class="mr">Coordenador</div><div class="ma">Blockchain, Eng. de Software, Sistemas Distribuídos</div></div>
+<div class="mc"><img src="site/public/images/members/pamella.jpeg" class="mp"><h3>Pamella Sousa</h3><div class="mr">Doutoranda</div><div class="ma">Contratos Inteligentes, Mineração de Repositórios</div></div>
+<div class="mc"><img src="site/public/images/members/raphael.png" class="mp"><h3>Raphael Saraiva</h3><div class="mr">Doutorando</div><div class="ma">Criptomoedas, DeFi, Stablecoins</div></div>
+<div class="mc"><img src="site/public/images/members/anaklyssia.jpeg" class="mp"><h3>Ana Klyssia</h3><div class="mr">Doutoranda</div><div class="ma">Blockchain, NLP, Chatbots Inteligentes</div></div>
+<div class="mc"><img src="site/public/images/members/allysson.png" class="mp"><h3>Allysson Allex</h3><div class="mr">Colaborador</div><div class="ma">Blockchain, Engenharia de Software</div></div>
+</div></div></div>
+
+<div class="sl s-ct" data-s="4">
+<div class="hdr"><div class="sn">04 — Portfólio</div><h2>Cases e Parcerias</h2></div>
+<div class="bd"><div class="g g5">
+<div class="pc"><img src="site/public/images/projects/docstone.png" class="pm"><div class="pi"><h3>Docstone</h3><p>Autenticação documental em blockchain com certificação imutável</p><span class="pb">🏆 3º SBCARS 2022</span></div></div>
+<div class="pc"><img src="site/public/images/projects/miriam.png" class="pm"><div class="pi"><h3>Miriam</h3><p>Framework de migração de contratos inteligentes entre plataformas</p><span class="pb">📄 IEEE ICBC 2021</span></div></div>
+<div class="pc"><img src="site/public/images/projects/web3blockset.png" class="pm"><div class="pi"><h3>Web3BlockSet</h3><p>Dataset curado de repositórios blockchain para mineração de software</p><span class="pb">📄 MSR 2026</span></div></div>
+<div class="pc"><img src="site/public/images/projects/jobis.png" class="pm"><div class="pi"><h3>JoBis</h3><p>Stablecoin lastreada em ouro com mecanismo de estabilidade algorítmica</p><span class="pb">💰 DeFi &amp; Tokenização</span></div></div>
+<div class="pc"><img src="site/public/images/projects/chatbot.png" class="pm"><div class="pi"><h3>Chatbot IA</h3><p>Assistente inteligente especializado em blockchain com NLP</p><span class="pb">🤖 NLP + Web3</span></div></div>
+</div></div></div>
+
+<div class="sl s-ct" data-s="5">
+<div class="hdr"><div class="sn">05 — Proposta</div><h2>Oportunidades de Cooperação com o BNB</h2></div>
+<div class="bd"><div class="g g3">
+<div class="oc"><div class="oi">🌾</div><div class="ot"><h3>Crédito Rural</h3><p>Rastreabilidade de cadeias agrícolas com blockchain para contratos do FNE e Pronaf</p></div></div>
+<div class="oc"><div class="oi">💳</div><div class="ot"><h3>Fintech &amp; Pagamentos</h3><p>Stablecoins, DeFi e tokenização de ativos para inovação em produtos financeiros</p></div></div>
+<div class="oc"><div class="oi">🔍</div><div class="ot"><h3>Transparência Pública</h3><p>Auditoria on-chain de fundos públicos, compliance automatizado com smart contracts</p></div></div>
+<div class="oc"><div class="oi">🧪</div><div class="ot"><h3>Inovação PD&amp;I</h3><p>Projetos de pesquisa conjuntos com financiamento FNDCT, FINEP e programas do BNB</p></div></div>
+<div class="oc"><div class="oi">🛡️</div><div class="ot"><h3>Segurança &amp; Compliance</h3><p>Verificação formal de contratos, proteção contra fraudes, conformidade regulatória</p></div></div>
+<div class="oc"><div class="oi">🌿</div><div class="ot"><h3>ESG &amp; Desenvolvimento Regional</h3><p>Blockchain para créditos de carbono, certificação de origem e economia circular no NE</p></div></div>
+</div></div></div>
+
+<div class="sl s-co" data-s="6">
+<div class="cw">
+<div class="cl"><h2>Vamos conversar?</h2>
+<div class="cn">Prof. Jerffeson Teles Souza</div><div class="cro">Coordenador do LabChain</div>
+<div class="ci2"><span class="cic">📧</span><span>jerffeson.souza@uece.br</span></div>
+<div class="ci2"><span class="cic">🌐</span><span>labchain.uece.br</span></div>
+<div class="ci2"><span class="cic">📍</span><span>UECE · PPGCC · Fortaleza-CE</span></div>
+</div>
+<div class="cri"><div class="cq"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAAEiCAIAAADS3EjhAAAFCElEQVR4nO3du24UQRBAURaRIT6SL+MjEfGQOhoJ2tfVPT4n36f3qgOXql/XdX0BSl+n3wA8n8wgJzPIyQxyMoOczCAnM8jJDHIyg5zMICczyMkMcjKDnMwgJzPIyQxyMoOczCAnM8h9W3nwj++/3ut9bOL3n5/RM99/V/ev+7zHnmjlt+E0g5zMICczyMkMcjKDnMwgJzPIyQxyMoPc0hTIvW6iYsWJ0wl7zqas+Gy/DacZ5GQGOZlBTmaQkxnkZAY5mUFOZpCTGeTCKZB73X/cp2Ym7nWbM1Y+b7cLZMWJv417TjPIyQxyMoOczCAnM8jJDHIyg5zMICczyI1NgTzP1A0pz5uZeB6nGeRkBjmZQU5mkJMZ5GQGOZlBTmaQkxnkTIG8m5XNGVNbN/gYTjPIyQxyMoOczCAnM8jJDHIyg5zMICczyI1NgXy2yYapGZGpu2ZWPO+34TSDnMwgJzPIyQxyMoOczCAnM8jJDHIyg1w4BdLdVLKnqRthVkxtKNnz2+g4zSAnM8jJDHIyg5zMICczyMkMcjKDnMwgtzQF8rydDStWJhueNxXht/GW0wxyMoOczCAnM8jJDHIyg5zMICczyMkMcq/ruv77wVM3lXSmZhemvo3u8/r7vuU0g5zMICczyMkMcjKDnMwgJzPIyQxyMoPc0hRIp5shmJp76GZi9vxEU8+85+s6zSAnM8jJDHIyg5zMICczyMkMcjKDnMwgt3QjTDf3sOccwJ6P3XMjy4kTJN0zO80gJzPIyQxyMoOczCAnM8jJDHIyg5zMIGcXyD848d6WbsvIid/GPVMgcDCZQU5mkJMZ5GQGOZlBTmaQkxnkZAa5pV0gnRP/0z+1+2TP22RWXnflE03NptxzmkFOZpCTGeRkBjmZQU5mkJMZ5GQGOZlBLrwRZk8nzh+ceHtO98wn3kPkNIOczCAnM8jJDHIyg5zMICczyMkMcjKDXLgLZGo6oXvs1ITBibfY7DlPs/K6boSBrckMcjKDnMwgJzPIyQxyMoOczCAnM8hteiPM1M6GFc/bYDF1P87KM688tps+cZpBTmaQkxnkZAY5mUFOZpCTGeRkBjmZQW5sCqSbiljxvK0bK9/kiTf+rHwbboSBg8kMcjKDnMwgJzPIyQxyMoOczCAnM8i9ruuafg/H2HNDydQ8zZ43/uy5J8ZpBjmZQU5mkJMZ5GQGOZlBTmaQkxnkZAa5pV0gJ+6KuNftinjeppDude+duCfGaQY5mUFOZpCTGeRkBjmZQU5mkJMZ5GQGufBGmD23MnSTDfdWZhf2/CbvTW0K2XNSx2kGOZlBTmaQkxnkZAY5mUFOZpCTGeRkBrlwCuTenjsb9rTnzpWpd9XN03S/HKcZ5GQGOZlBTmaQkxnkZAY5mUFOZpCTGeTGpkA+m+5mlm77RXf3ysoz77nN5Z7TDHIyg5zMICczyMkMcjKDnMwgJzPIyQxypkA+yPNuSOk+0Z7TJyucZpCTGeRkBjmZQU5mkJMZ5GQGOZlBTmaQG5sCOfHelm6GYGpHRWfP+2KmOM0gJzPIyQxyMoOczCAnM8jJDHIyg5zMIBdOgUzNAXS63Rjdxo6p153aurHnr85pBjmZQU5mkJMZ5GQGOZlBTmaQkxnkZAa513Vd0+8BHs5pBjmZQU5mkJMZ5GQGOZlBTmaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkJMZ5GQGOZlBTmaQ+wuZqYGLG88IcgAAAABJRU5ErkJggg=="></div><div class="cql">labchain.uece.br</div></div>
+</div>
+<div class="clo"><img src="site/public/images/uece-logo.png"><img src="site/public/images/ppgcc-logo.png"></div>
+</div>
+
+</div>
+<div class="nc">
+<button class="nb" id="pb" onclick="cs(-1)">‹</button>
+<div class="nd" id="nd"></div>
+<button class="nb" id="nb2" onclick="cs(1)">›</button>
+<div class="ct" id="ct">1/7</div>
+</div>
+<div class="kh">← → ou clique para navegar</div>
+<script>
+let c=0;const s=document.querySelectorAll('.sl'),t=s.length,nd=document.getElementById('nd'),ct=document.getElementById('ct'),pb=document.getElementById('pb'),nb=document.getElementById('nb2');
+for(let i=0;i<t;i++){const d=document.createElement('button');d.className='dot'+(i===0?' active':'');d.onclick=()=>go(i);nd.appendChild(d)}
+function go(n){if(n===c||n<0||n>=t)return;s[c].classList.remove('active');s[c].classList.add('exit');const p=c;setTimeout(()=>s[p].classList.remove('exit'),500);s[n].classList.add('active');c=n;uu()}
+function cs(d){go(c+d)}
+function uu(){document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===c));ct.textContent=`${c+1}/${t}`;pb.disabled=c===0;nb.disabled=c===t-1}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();cs(1)}else if(e.key==='ArrowLeft'){e.preventDefault();cs(-1)}else if(e.key==='Home'){e.preventDefault();go(0)}else if(e.key==='End'){e.preventDefault();go(t-1)}});
+let tx=0;document.addEventListener('touchstart',e=>{tx=e.touches[0].clientX});document.addEventListener('touchend',e=>{const d=tx-e.changedTouches[0].clientX;if(Math.abs(d)>50)cs(d>0?1:-1)});
+document.addEventListener('keydown',()=>{document.querySelector('.kh').style.opacity='0'},{once:true});
+</script>
+</body></html>

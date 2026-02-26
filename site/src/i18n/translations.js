@@ -42,14 +42,18 @@ export const translations = {
     activities_see_all: 'Ver todas',
 
     // Research
-    research_title: 'Publicações',
-    research_subtitle: 'Artigos publicados em conferências e periódicos nacionais e internacionais',
+    research_title: 'Publicações e Trabalhos de Conclusão de Curso',
+    research_subtitle: 'Artigos publicados em conferências e periódicos nacionais e internacionais, além de monografias, dissertações e teses produzidas pelo grupo',
     view_pdf: 'PDF',
     view_preprint: 'Pre-print',
     view_publisher: 'Publicação',
     view_slides: 'Slides',
     view_video: 'Vídeo',
     award_label: 'Premiação',
+    tcc_defense: 'Defesa',
+    tcc_monografia: 'Monografia',
+    tcc_dissertacao: 'Dissertação',
+    tcc_tese: 'Tese',
 
     // Members
     members_title: 'Membros',
@@ -71,8 +75,8 @@ export const translations = {
     pagination_next: 'Próxima',
 
     // Projects
-    projects_title: 'Projetos de Desenvolvimento',
-    projects_subtitle: 'Soluções construídas a partir das nossas pesquisas',
+    projects_title: 'Projetos de Desenvolvimento e Inovação',
+    projects_subtitle: 'Soluções construídas a partir das nossas pesquisas e de parcerias com o mercado e o setor público',
     view_project: 'Ver Projeto',
 
     // Affiliation
@@ -127,8 +131,8 @@ export const translations = {
     hero_cta: 'Explore our research',
     about_title: 'About Us',
     about_subtitle: '',
-    about_text: 'The Blockchain Research Lab and its Applications - LabChain is affiliated with the Center of Science and Technology at UECE and associated with the Graduate Program in Computer Science. We have been developing blockchain-related research since 2019, in partnership with professors and researchers from various institutions.',
-    about_text2: 'Our research activities are defined based on the group\'s prior experience and current demands from society, industry, and the public sector, covering everything from technical foundations to practical applications in strategic sectors such as healthcare, education, finance, and public administration.',
+    about_text: "The Blockchain Research Lab and its Applications - LabChain is affiliated with the Center of Science and Technology at UECE and associated with the Graduate Program in Computer Science. We have been developing blockchain-related research since 2019, in partnership with professors and researchers from various institutions.",
+    about_text2: "Our research activities are defined based on the group's prior experience and current demands from society, industry, and the public sector, covering everything from technical foundations to practical applications in strategic sectors such as healthcare, education, finance, and public administration.",
     research_lines_title: 'Research Lines',
     research_lines_subtitle: 'Eight axes guiding our investigations',
     rl_1_title: 'Blockchain Foundations and Infrastructure',
@@ -156,14 +160,18 @@ export const translations = {
     activities_see_all: 'See all',
 
     // Research
-    research_title: 'Publications',
-    research_subtitle: 'Papers published in national and international conferences and journals',
+    research_title: 'Publications & Academic Works',
+    research_subtitle: 'Papers published in national and international conferences and journals, as well as monographs, dissertations, and theses produced by the group',
     view_pdf: 'PDF',
     view_preprint: 'Pre-print',
     view_publisher: 'Publisher',
     view_slides: 'Slides',
     view_video: 'Video',
     award_label: 'Award',
+    tcc_defense: 'Defense',
+    tcc_monografia: 'Monograph',
+    tcc_dissertacao: 'Dissertation',
+    tcc_tese: 'Thesis',
 
     // Members
     members_title: 'Members',
@@ -185,8 +193,8 @@ export const translations = {
     pagination_next: 'Next',
 
     // Projects
-    projects_title: 'Development Projects',
-    projects_subtitle: 'Solutions built from our research',
+    projects_title: 'Development & Innovation Projects',
+    projects_subtitle: 'Solutions built from our research and partnerships with industry and government',
     view_project: 'View Project',
 
     // Affiliation
