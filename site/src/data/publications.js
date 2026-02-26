@@ -57,6 +57,19 @@ export const publications = [
         video: null,
         award: null,
       },
+      {
+        type: 'tcc',
+        tcType: 'monografia',       // 'monografia' | 'dissertacao' | 'tese'
+        defenseDate: '2025',      // formato MM/AAAA
+        title: 'Uma proposta de integração de sistemas da Secretaria do Patrimônio da União ao blockchain para incentivo à transparência de processos: uma análise de usabilidade e experiência de desenvolvedores',
+        authors: 'Raphael Lima Saraiva',
+        venue: 'Universidade Estadual do Ceará, 2025.',
+        preprint: null,
+        publisherUrl: '/images/papers/2025/monografia_iago.pdf',
+        slides: null,
+        video: null,
+        award: null,
+      },
     ],
   },
   {
@@ -188,6 +201,19 @@ export const publications = [
     year: 2021,
     papers: [
       {
+        type: 'tcc',
+        tcType: 'monografia',       // 'monografia' | 'dissertacao' | 'tese'
+        defenseDate: '2021',      // formato MM/AAAA
+        title: 'Um Estudo Sociotécnico Multi-Método para Desenvolvimento e Avaliação de um Prontuário Eletrônico do Paciente Baseado em Blockchain',
+        authors: 'Pamella Soares de Sousa',
+        venue: 'Universidade Estadual do Ceará, 2021.',
+        preprint: null,
+        publisherUrl: '/images/papers/2021/dissertacao_pamella.pdf',
+        slides: null,
+        video: null,
+        award: null,
+      },
+      {
         title: 'Escalabilidade no Contexto de Prontuário Eletrônico do Paciente Baseado em Blockchain: Um Estudo Experimental sobre Armazenamento Off-chain',
         authors: null,
         venue: null,
@@ -213,6 +239,19 @@ export const publications = [
         venue: 'Workshop de Visualização, Evolução e Manutenção de Software (VEM), p. 11–15, 2021.',
         preprint: null,
         publisherUrl: 'https://sol.sbc.org.br/index.php/vem/article/view/17210',
+        slides: null,
+        video: null,
+        award: null,
+      },
+      {
+        type: 'tcc',
+        tcType: 'tese',       // 'monografia' | 'dissertacao' | 'tese'
+        defenseDate: '2021',      // formato MM/AAAA
+        title: 'Shaping Cryptoeconomics as a New Market Through Business Model Innovation',
+        authors: 'Allysson Allex de Paula Araújo',
+        venue: 'Universidade Estadual do Ceará, 2021.',
+        preprint: null,
+        publisherUrl: '/images/papers/2021/tese_allysson.pdf',
         slides: null,
         video: null,
         award: null,
@@ -258,6 +297,24 @@ export const publications = [
         venue: 'IEEE International Conference on Software Architecture Companion (ICSA-C), 2020.',
         preprint: null,
         publisherUrl: 'https://doi.org/10.1109/ICSA-C50368.2020.00031',
+        slides: null,
+        video: null,
+        award: null,
+      },
+    ],
+  },
+  {
+    year: 2020,
+    papers: [
+      {
+        type: 'tcc',
+        tcType: 'dissertacao',       // 'monografia' | 'dissertacao' | 'tese'
+        defenseDate: '2019',      // formato MM/AAAA
+        title: 'Uma Solução Baseada em Blockchain para Gerenciar Registros de Profissionais Médicos',
+        authors: 'Raphael Lima Saraiva',
+        venue: 'Universidade Estadual do Ceará, 2019.',
+        preprint: null,
+        publisherUrl: '/images/papers/2019/dissertacao_raphael.pdf',
         slides: null,
         video: null,
         award: null,

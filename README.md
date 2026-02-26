@@ -70,6 +70,39 @@ Edite `site/src/data/publications.js`:
 - PDFs de preprints devem estar em `site/public/images/papers/ANO/arquivo.pdf`
 - Se `preprint` ou `publisherUrl` for `null` ou `'#'`, o botão não aparecerá
 
+
+### 2.1 Adicionar TCC (Monografia, Dissertação ou Tese)
+
+TCCs também são registrados em `site/src/data/publications.js`, dentro do ano correspondente à defesa. Basta incluir `type: 'tcc'` e os campos específicos:
+
+```js
+{
+  type: 'tcc',            // identifica o trabalho como TCC
+  tcType: 'dissertacao',  // 'monografia' | 'dissertacao' | 'tese'
+  defenseDate: '03/2025', // data de defesa no formato MM/AAAA
+  title: 'Título do Trabalho',
+  authors: 'Nome do Autor',
+  venue: 'Universidade Estadual do Ceará, 2025.',
+  preprint: '/images/papers/2025/nome-trabalho.pdf', // ou null
+  publisherUrl: null,
+  slides: null,
+  video: null,
+  award: null,
+}
+```
+
+O card do TCC exibirá automaticamente a badge **TCC**, a badge do tipo (ex.: **Dissertação**) e a data de defesa.
+
+**Política de PDF para TCCs:**
+
+Adotamos a prática de disponibilizar uma versão simplificada do arquivo, removendo páginas institucionais (folha de rosto com assinaturas, ficha catalográfica, folha de aprovação, dedicatória, etc.). O PDF resultante deve seguir esta estrutura:
+
+1. **Introdução** (primeira página visível)
+2. **Resumo / Abstract**
+3. **Restante do trabalho** (sumário, capítulos, referências, apêndices)
+
+Isso preserva a privacidade dos membros da banca e signatários, mantendo o conteúdo acadêmico integralmente acessível.
+
 ### 3. Adicionar Atividade/Notícia
 
 Edite `site/src/data/news.js`:
