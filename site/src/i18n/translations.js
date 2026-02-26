@@ -42,7 +42,7 @@ export const translations = {
     activities_see_all: 'Ver todas',
 
     // Research
-    research_title: 'Publicações e Trabalhos de Conclusão de Curso',
+    research_title: 'Pesquisas',
     research_subtitle: 'Artigos publicados em conferências e periódicos nacionais e internacionais, além de monografias, dissertações e teses produzidas pelo grupo',
     view_pdf: 'PDF',
     view_preprint: 'Pre-print',
@@ -160,7 +160,7 @@ export const translations = {
     activities_see_all: 'See all',
 
     // Research
-    research_title: 'Publications & Academic Works',
+    research_title: 'Research',
     research_subtitle: 'Papers published in national and international conferences and journals, as well as monographs, dissertations, and theses produced by the group',
     view_pdf: 'PDF',
     view_preprint: 'Pre-print',
