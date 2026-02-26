@@ -60,9 +60,8 @@ export const publications = [
       {
         type: 'tcc',
         tcType: 'monografia',       // 'monografia' | 'dissertacao' | 'tese'
-        defenseDate: '2025',      // formato MM/AAAA
         title: 'Uma proposta de integração de sistemas da Secretaria do Patrimônio da União ao blockchain para incentivo à transparência de processos: uma análise de usabilidade e experiência de desenvolvedores',
-        authors: 'Raphael Lima Saraiva',
+        authors: 'Iago Fernandes',
         venue: 'Universidade Estadual do Ceará, 2025.',
         preprint: null,
         publisherUrl: '/images/papers/2025/monografia_iago.pdf',
