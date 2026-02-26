@@ -202,7 +202,6 @@ export const publications = [
       {
         type: 'tcc',
         tcType: 'monografia',       // 'monografia' | 'dissertacao' | 'tese'
-        defenseDate: '2021',      // formato MM/AAAA
         title: 'Um Estudo Sociotécnico Multi-Método para Desenvolvimento e Avaliação de um Prontuário Eletrônico do Paciente Baseado em Blockchain',
         authors: 'Pamella Soares de Sousa',
         venue: 'Universidade Estadual do Ceará, 2021.',
@@ -245,7 +244,6 @@ export const publications = [
       {
         type: 'tcc',
         tcType: 'tese',       // 'monografia' | 'dissertacao' | 'tese'
-        defenseDate: '2021',      // formato MM/AAAA
         title: 'Shaping Cryptoeconomics as a New Market Through Business Model Innovation',
         authors: 'Allysson Allex de Paula Araújo',
         venue: 'Universidade Estadual do Ceará, 2021.',
@@ -303,12 +301,11 @@ export const publications = [
     ],
   },
   {
-    year: 2020,
+    year: 2019,
     papers: [
       {
         type: 'tcc',
         tcType: 'dissertacao',       // 'monografia' | 'dissertacao' | 'tese'
-        defenseDate: '2019',      // formato MM/AAAA
         title: 'Uma Solução Baseada em Blockchain para Gerenciar Registros de Profissionais Médicos',
         authors: 'Raphael Lima Saraiva',
         venue: 'Universidade Estadual do Ceará, 2019.',

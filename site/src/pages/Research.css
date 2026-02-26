@@ -144,9 +144,7 @@
 }
 
 /* ── TCC (Trabalho de Conclusão de Curso) ── */
-.paper-card--tcc {
-  border-left: 4px solid var(--purple-dark);
-}
+.paper-card--tcc {}
 
 .paper-tcc-tags {
   display: flex;

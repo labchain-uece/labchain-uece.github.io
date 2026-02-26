@@ -78,7 +78,7 @@ export default function Members() {
           {/* Researchers */}
           <h2 className="members-group-title">{t('members_researchers')}</h2>
           <div className="members-grid">
-            {researchers.map((m, i) => (
+            {[...researchers].sort((a, b) => a.name.localeCompare(b.name)).map((m, i) => (
               <MemberCard key={i} member={m} />
             ))}
           </div>
@@ -86,7 +86,7 @@ export default function Members() {
           {/* Collaborators */}
           <h2 className="members-group-title">{t('members_collaborators')}</h2>
           <div className="members-grid">
-            {collaborators.map((m, i) => (
+            {[...collaborators].sort((a, b) => a.name.localeCompare(b.name)).map((m, i) => (
               <MemberCard key={i} member={m} />
             ))}
           </div>
