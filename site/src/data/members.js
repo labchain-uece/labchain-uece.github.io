@@ -31,7 +31,7 @@ export const researchers = [
     name: 'Karla Haryanna',
     title: { pt: 'Estudante de Doutorado', en: 'PhD Student' },
     university: { pt: 'Universidade Estadual do Ceará', en: 'State University of Ceará' },
-    photo: '/images/members/karla.jpg',
+    photo: '/images/members/karla.png',
     interests: {
       pt: ['Blockchain', 'Engenharia de Software', 'Inteligência Artificial'],
       en: ['Blockchain', 'Software Engineering', 'Artificial Intelligence'],
