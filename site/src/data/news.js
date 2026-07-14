@@ -12,7 +12,9 @@ export const activities = [
       pt: 'Foi aceito o artigo “From Specification to Practice: An Empirical Study of Ethereum ERC Standard Adoption in Open Source Projects” no Simpósio Brasileiro de Engenharia de Software (SBES) 2026, já disponível em versão preprint.',
       en: 'The paper “From Specification to Practice: An Empirical Study of Ethereum ERC Standard Adoption in Open Source Projects” was accepted at the Brazilian Symposium on Software Engineering (SBES) 2026, already available as a preprint.',
     },
-    photos: [],
+    photos: [
+      '/images/news/cbsoft-sbes-2026.svg',
+    ],
   },
   {
     id: 6,
@@ -26,7 +28,9 @@ export const activities = [
       pt: 'Foi publicado o artigo “Adoption of Blockchain for Decentralized Execution Agreements: Empirical Evidence of Usability and Acceptance”, fruto de colaboração com o GESAD, no 11º Workshop sobre Aspectos Sociais, Humanos e Econômicos de Software (WASHES 2026), na trilha de Artigos Curtos.',
       en: 'The paper “Adoption of Blockchain for Decentralized Execution Agreements: Empirical Evidence of Usability and Acceptance”, developed in collaboration with GESAD, was published at the 11th Workshop on Social, Human and Economic Aspects of Software (WASHES 2026), Short Papers track.',
     },
-    photos: [],
+    photos: [
+      '/images/news/washes-2026.png',
+    ],
   },
   {
     id: 5,
