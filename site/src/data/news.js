@@ -1,6 +1,53 @@
 // tag options: 'evento' | 'premiacao' | 'publicacao'
 export const activities = [
   {
+    id: 7,
+    date: '2026-07-02',
+    tag: 'publicacao',
+    title: {
+      pt: 'Artigo aceito no SBES 2026',
+      en: 'Paper accepted at SBES 2026',
+    },
+    description: {
+      pt: 'Foi aceito o artigo “From Specification to Practice: An Empirical Study of Ethereum ERC Standard Adoption in Open Source Projects”, de autoria de Pamella Soares, no Simpósio Brasileiro de Engenharia de Software (SBES) 2026, já disponível em versão preprint.',
+      en: 'The paper “From Specification to Practice: An Empirical Study of Ethereum ERC Standard Adoption in Open Source Projects”, authored by Pamella Soares, was accepted at the Brazilian Symposium on Software Engineering (SBES) 2026, already available as a preprint.',
+    },
+    photos: [],
+  },
+  {
+    id: 6,
+    date: '2026-05-04',
+    tag: 'publicacao',
+    title: {
+      pt: 'Novo artigo publicado no WASHES 2026',
+      en: 'New paper published at WASHES 2026',
+    },
+    description: {
+      pt: 'Foi publicado o artigo “Adoption of Blockchain for Decentralized Execution Agreements: Empirical Evidence of Usability and Acceptance”, fruto de colaboração com o GESAD, no 11º Workshop sobre Aspectos Sociais, Humanos e Econômicos de Software (WASHES 2026), na trilha de Artigos Curtos.',
+      en: 'The paper “Adoption of Blockchain for Decentralized Execution Agreements: Empirical Evidence of Usability and Acceptance”, developed in collaboration with GESAD, was published at the 11th Workshop on Social, Human and Economic Aspects of Software (WASHES 2026), Short Papers track.',
+    },
+    photos: [],
+  },
+  {
+    id: 5,
+    date: '2026-04-12',
+    tag: 'evento',
+    title: {
+      pt: 'Participação no ICSE 2026, pela primeira vez no Brasil',
+      en: 'Participation at ICSE 2026, held in Brazil for the first time',
+    },
+    description: {
+      pt: 'Membros do Labchain participaram da International Conference on Software Engineering (ICSE 2026), realizada no Rio de Janeiro entre os dias 12 e 18 de abril de 2026 — a primeira vez que o evento aconteceu no Brasil —, onde foram apresentados os artigos aceitos nos workshops WETSEB e MSR co-localizados à conferência.',
+      en: 'Labchain members participated in the International Conference on Software Engineering (ICSE 2026), held in Rio de Janeiro from April 12 to 18, 2026 — the first time the event took place in Brazil —, where the papers accepted at the co-located WETSEB and MSR workshops were presented.',
+    },
+    photos: [
+      '/images/news/icse-2026-0.jpeg',
+      '/images/news/icse-2026-1.jpeg',
+      '/images/news/icse-2026-2.jpeg',
+      '/images/news/icse-2026-3.jpeg',
+    ],
+  },
+  {
     id: 1,
     date: '2026-02-01',
     tag: 'publicacao',
