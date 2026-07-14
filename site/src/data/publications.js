@@ -35,7 +35,7 @@ export const publications = [
       {
         title: 'Towards an Intelligent Platform for Supporting Quality Assessment in Blockchain Systems',
         authors: 'Saraiva, R.; Araújo, A. A.; Santos, R. S.; Soares, P.; Souza, J.',
-        venue: 'Workshop on Emerging Trends in Software Engineering for Blockchain (WETSEB), Fortaleza, Ceará, Brazil, 2025.',
+        venue: 'Workshop on Emerging Trends in Software Engineering for Blockchain (WETSEB), Rio de Janeiro, Brazil, 2026.',
         preprint: '/images/papers/2026/intelligent-platform-wetseb-preprint.pdf',
         publisherUrl: 'https://dl.acm.org/doi/10.1145/3786157.3788566',
         slides: '/images/papers/2026/intelligent-platform-wetseb-slides.pdf',
