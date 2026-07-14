@@ -13,7 +13,7 @@ export const activities = [
       en: 'The paper “From Specification to Practice: An Empirical Study of Ethereum ERC Standard Adoption in Open Source Projects” was accepted at the Brazilian Symposium on Software Engineering (SBES) 2026, already available as a preprint.',
     },
     photos: [
-      '/images/news/cbsoft-sbes-2026.svg',
+      '/images/news/cbsoft2026-0.png',
     ],
   },
   {
