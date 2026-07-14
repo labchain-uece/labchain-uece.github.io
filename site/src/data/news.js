@@ -9,8 +9,8 @@ export const activities = [
       en: 'Paper accepted at SBES 2026',
     },
     description: {
-      pt: 'Foi aceito o artigo “From Specification to Practice: An Empirical Study of Ethereum ERC Standard Adoption in Open Source Projects”, de autoria de Pamella Soares, no Simpósio Brasileiro de Engenharia de Software (SBES) 2026, já disponível em versão preprint.',
-      en: 'The paper “From Specification to Practice: An Empirical Study of Ethereum ERC Standard Adoption in Open Source Projects”, authored by Pamella Soares, was accepted at the Brazilian Symposium on Software Engineering (SBES) 2026, already available as a preprint.',
+      pt: 'Foi aceito o artigo “From Specification to Practice: An Empirical Study of Ethereum ERC Standard Adoption in Open Source Projects” no Simpósio Brasileiro de Engenharia de Software (SBES) 2026, já disponível em versão preprint.',
+      en: 'The paper “From Specification to Practice: An Empirical Study of Ethereum ERC Standard Adoption in Open Source Projects” was accepted at the Brazilian Symposium on Software Engineering (SBES) 2026, already available as a preprint.',
     },
     photos: [],
   },
